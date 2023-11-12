@@ -10,8 +10,7 @@
     "build": "tsc",
     "build:prod": "tsc && ncc build lib/index.js --license licenses.txt && rm -rf lib",
     "clean": "rm -rf node_modules; rm -rf lib; rm -rf dist",
-    "start": "tsc && node lib/index.js",
-    "asd": "echo asd"
+    "start": "tsc && node lib/index.js"
   },
   "author": "",
   "license": "ISC",
