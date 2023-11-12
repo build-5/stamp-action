@@ -8,4 +8,4 @@ RUN npm install
 RUN npm run build
 RUN ls -la ./lib
 
-CMD [ "ls" , "./lib/index.js"]
+CMD [ "node" , "./lib/index.js"]
