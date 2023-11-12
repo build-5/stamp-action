@@ -22,6 +22,7 @@ export const uploadFile = () =>
 
       response.on("end", () => {
         const responseBody = Buffer.concat(chunks).toString();
+        console.log("responseBody", responseBody);
         res(JSON.parse(responseBody).data.url as string);
       });
     });
