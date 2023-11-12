@@ -40,7 +40,7 @@ export const zipProject = (path: string) =>
     archive.finalize();
     output.on("close", function () {
       const mb = archive.pointer() / 1024 / 1024;
-      console.log(`Zip file created: ${OUTPUT_FILE} (${mb} total mb)`);
+      console.log(`Zip file created: ${OUTPUT_FILE} (${mb.toPrecision(6)} total mb)`);
       fs.chmodSync(OUTPUT_FILE, 777);
       res();
     });
