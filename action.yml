@@ -1,0 +1,25 @@
+name: "Build5 stamp action"
+description: "Stamps the provided path."
+inputs:
+  path:
+    description: "Path to stamp"
+    required: true
+    default: ./
+  node:
+    description: "Url of the iota node"
+    required: true
+    default: https://rms1.svrs.io/
+  mnemonic:
+    description: "Mnemonic used for funding the stamp request"
+    required: true
+  otr_address:
+    description: "Build5 OTR address."
+    required: true
+    default: rms1qp29ma9mugkrlaq9e60pmdray4sn2zjpet4vyk86cezm0jqpdwuhv68j3vh
+  days:
+    description: "File will be stamped for this many days"
+    required: true
+    default: 1
+runs:
+  using: "node20"
+  main: "dist/index.js"
