@@ -6,6 +6,6 @@ COPY ./ ./
 
 RUN npm install
 RUN npm run build
-RUN ls -la
-RUN ls -la /github/workspace
+RUN ls -la ./lib
 
+CMD [ "ls" , "./lib/index.js"]
